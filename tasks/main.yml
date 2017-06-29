@@ -1,0 +1,18 @@
+---
+# tasks file for cdh-manager-agent
+
+
+- name: Copy over config.ini
+  template:
+    src: config.ini.j2
+    dest: /etc/cloudera-scm-agent/config.ini
+    owner: root
+    group: root
+    mode: 0644
+- name: Copy over default file
+  template:
+    src: cloudera-scm-agent.j2
+    dest: /etc/default/cloudera-scm-agent
+    owner: root
+    group: root
+    mode: 0644

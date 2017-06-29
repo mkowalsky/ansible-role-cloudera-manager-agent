@@ -1,0 +1,37 @@
+---
+# defaults file for cdh-manager-agent
+cdh_manager_agent_server_host: localhost
+cdh_manager_agent_server_port: 7182
+
+
+#cdh_manager_agent_listening_port:
+#cdh_manaer_agent_listening_hostname:
+#cdh_manager_agent_reported_hostname:
+
+cdh_manager_agent_max_collection_wait_seconds: 10.0
+cdh_manager_agent_metrics_url_timeout_seconds: 30.0
+cdh_manager_agent_task_metrics_timeout_seconds: 5.0
+cdh_manager_agent_monitored_nodev_filesystem_types:
+  - nfs
+  - nfs4
+  - tmpfs
+
+cdh_manager_agent_local_filesystem_whitelist:
+  - ext2
+  - ext3
+  - ext4
+  - xfs
+
+cdh_manager_agent_impala_profile_bundle_max_bytes: 1073741824
+
+cdh_manager_agent_stacks_log_bundle_max_bytes: 1073741824
+
+cdh_manager_agent_stacks_log_max_uncompressed_file_size_bytes: 5242880
+cdh_manager_agent_orphan_process_dir_staleness_threshold: 5184000
+cdh_manager_agent_orphan_process_dir_refresh_interval: 3600
+cdh_manager_agent_scm_debug: INFO # or DEBUG
+cdh_manager_agent_dns_resolution_collection_interval_seconds: 60
+cdh_manager_agent_dns_resolution_collection_timeout_seconds: 30
+
+#cdh_manager_agent_lib_dir
+#cdh_manager_agent_cmf_agent_args:
