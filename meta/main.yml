@@ -1,6 +1,6 @@
 galaxy_info:
   author:  Matt Kowalsky
-  description: Install Cloudera Manager Agents
+  description: Install Cloudera Manager Agents. Work in Progress. 
 #  company:
 
   # If the issue tracker for your role is not on github, uncomment the
