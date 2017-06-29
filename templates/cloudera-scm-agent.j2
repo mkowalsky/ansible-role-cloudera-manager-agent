@@ -1,0 +1,17 @@
+#
+# Specify any command line arguments for the Cloudera SCM Agent here.
+#
+{%if cdh_manager_agent_cmf_agent_args is defined %}
+CMF_AGENT_ARGS={{ cdh_manager_agent_cmf_agent_args }}
+{% else %}
+CMF_AGENT_ARGS=""
+{% endif %}
+
+{% if cdh_manager_agent_user is defined %}
+USER="{{ cdh_manager_agent_user }}"
+{% else %}
+#
+# Uncomment to change the user the agent runs as (default is root).
+#
+#USER="cloudera-scm"
+{% endif %}
