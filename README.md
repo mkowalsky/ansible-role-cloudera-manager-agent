@@ -1,6 +1,8 @@
 # ansible-role-cloudera-manager-agent
-=======================================
-Ansible Role to manage the installation Cloudera Manager Agents
+
+Ansible Role to manage the installation Cloudera Manager Agents on servers
+
+# role is a work in progress. 
 
 
 Requirements
