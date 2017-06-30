@@ -1,5 +1,9 @@
 ---
 # defaults file for cdh-manager-agent
+# cloudera.list
+cdh_manager_agent_version: 5
+
+# config.ini
 cdh_manager_agent_server_host: localhost
 cdh_manager_agent_server_port: 7182
 

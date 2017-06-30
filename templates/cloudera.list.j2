@@ -1,0 +1,6 @@
+# Packages for Cloudera's Distribution for Hadoop
+# Ansible Template
+
+deb [arch=amd64] {{__base_repo_url }}{{ ansible_lsb.id|lower }}/{{ ansible_lsb.codename|lower }}/amd64/cm precise-cm{{ cdh_manager_agent_version }} contrib
+deb-src {{__base_repo_url }}{{ ansible_lsb.id|lower }}/{{ ansible_lsb.codename|lower }}/amd64/cm precise-cm{{ cdh_manager_agent_version }} contrib
+

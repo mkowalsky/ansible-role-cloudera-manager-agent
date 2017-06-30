@@ -1,2 +1,4 @@
 ---
 # vars file for cdh-manager-agent
+__base_repo_url: http://archive.cloudera.com/cm5/
+cdh_manager_agent_apt_repo_key: "{{ __base_repo_url }}{{ ansible_lsb.id|lower }}/{{ ansible_lsb.codename|lower }}/amd64/cm/archive.key"

@@ -1,6 +1,9 @@
 ---
 # tasks file for cdh-manager-agent
 
+- name: Setup Ubuntu
+  include: "setup-Ubuntu.yml"
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Copy over config.ini
   template:
@@ -9,6 +12,7 @@
     owner: root
     group: root
     mode: 0644
+
 - name: Copy over default file
   template:
     src: cloudera-scm-agent.j2
@@ -16,3 +20,8 @@
     owner: root
     group: root
     mode: 0644
+
+- name: Restart cloudera-scm-agent
+  service:
+    name: cloudera-scm-agent
+    state: restarted
