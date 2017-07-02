@@ -13,15 +13,15 @@
     group: root
     mode: 0644
 
-- name: Update cache
-  apt:
-    update_cache: yes
-    cache_valid_time: 3600
-
+#- name: Update cache
+#  apt:
+#    update_cache: yes
+#
 - name: Install cloudera-scm-agent
   apt:
     name: "{{ item }}"
     state: present
+    update_cache: yes
   with_items:
     - 'cloudera-manager-agent'
     - 'cloudera-manager-daemons'

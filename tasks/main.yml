@@ -5,6 +5,7 @@
   include: "setup-Ubuntu.yml"
   when: ansible_distribution == 'Ubuntu'
 
+
 - name: Copy over config.ini
   template:
     src: config.ini.j2
@@ -12,7 +13,8 @@
     owner: root
     group: root
     mode: 0644
-
+  notify:
+    - restart cloudera-scm-agent
 - name: Copy over default file
   template:
     src: cloudera-scm-agent.j2
@@ -20,8 +22,5 @@
     owner: root
     group: root
     mode: 0644
-
-- name: Restart cloudera-scm-agent
-  service:
-    name: cloudera-scm-agent
-    state: restarted
+  notify:
+    - restart cloudera-scm-agent

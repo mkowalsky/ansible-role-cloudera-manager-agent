@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - cdh-manager-agent
+    - role_under_test

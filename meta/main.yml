@@ -36,6 +36,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
       - precise
+      - trusy
   #   - all
   #   - 25
   # - name: SomePlatform

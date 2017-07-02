@@ -1,0 +1,41 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Gist
+ @mkowalsky
+ Sign out
+ Watch 26
+  Star 189
+ Fork 193 geerlingguy/ansible-role-apache
+ Code  Issues 11  Pull requests 13  Projects 0  Wiki Insights
+Branch: master Find file Copy pathansible-role-apache/.travis.yml
+7381d7e  on Apr 1
+@geerlingguy geerlingguy Switch to more efficient and compact test setup.
+2 contributors @geerlingguy @bertvv
+RawBlameHistory
+22 lines (17 sloc)  459 Bytes
+---
+services: docker
+
+env:
+#  - distro: centos7
+#  - distro: centos6
+#  - distro: debian8
+  - distro: ubuntu1604
+  - distro: ubuntu1404
+  - distro: ubuntu1204
+#  - distro: debian8
+
+script:
+  # Download test shim.
+  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
+  - chmod +x ${PWD}/tests/test.sh
+
+  # Run tests.
+  - ${PWD}/tests/test.sh
+
+#notifications:
+#  webhooks: https://galaxy.ansible.com/api/v1/notifications/
