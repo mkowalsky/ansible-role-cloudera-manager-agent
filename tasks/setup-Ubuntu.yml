@@ -1,0 +1,27 @@
+---
+
+- name: Add Cloudera repo Apt Key
+  apt_key:
+    url: "{{ cdh_manager_agent_apt_repo_key }}"
+    state: present
+
+- name: Add Cloudera Repo
+  template:
+    src: cloudera.list.j2
+    dest: /etc/apt/sources.list.d/cloudera.list
+    owner: root
+    group: root
+    mode: 0644
+
+#- name: Update cache
+#  apt:
+#    update_cache: yes
+#
+- name: Install cloudera-scm-agent
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - 'cloudera-manager-agent'
+    - 'cloudera-manager-daemons'

@@ -1,5 +1,11 @@
 ---
 # defaults file for cdh-manager-agent
+# cloudera.list
+# major
+cdh_manager_agent_major_version: 5
+cdh_manager_agent_version: "{{ cdh_manager_agent_major_version }}"
+
+# config.ini
 cdh_manager_agent_server_host: localhost
 cdh_manager_agent_server_port: 7182
 
@@ -23,9 +29,7 @@ cdh_manager_agent_local_filesystem_whitelist:
   - xfs
 
 cdh_manager_agent_impala_profile_bundle_max_bytes: 1073741824
-
 cdh_manager_agent_stacks_log_bundle_max_bytes: 1073741824
-
 cdh_manager_agent_stacks_log_max_uncompressed_file_size_bytes: 5242880
 cdh_manager_agent_orphan_process_dir_staleness_threshold: 5184000
 cdh_manager_agent_orphan_process_dir_refresh_interval: 3600
